@@ -37,6 +37,7 @@ import sys
 sys.path.append('/path/to/directory/containing/plotting_functions.py')
 
 from plotting_functions import plot_spatial_patterns
+```
 
 ### Running the Function
 
