@@ -2,18 +2,18 @@ import pandas as pd
 import seaborn as sns
 import numpy as np
 import xarray as xr
-import xesmf as xe
-import glob
-import statsmodels.api as sm
-import pymannkendall as mk
-import csv
+#import xesmf as xe
+#import glob
+#import statsmodels.api as sm
+#import pymannkendall as mk
+#import csv
 
 import math
 
-from scipy import stats
+#from scipy import stats
 
-import regionmask
-import cf_xarray
+#import regionmask
+#import cf_xarray
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
