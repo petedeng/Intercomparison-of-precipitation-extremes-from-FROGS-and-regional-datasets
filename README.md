@@ -100,6 +100,7 @@ txt_kwargs = ...
 plot_spatial_patterns(spatial_patterns, datasets_names, boundary_kwargs, cluster_kwargs, txt_kwargs)
 
 # Other functions: plot_spatial_patterns_diff and plot_time_series_and_trend_boxplots
+
 The function, `plot_spatial_patterns_diff` is designed to generate spatial plots for the differences between each dataset and the mean of multiple datasets. 
 The function, `plot_time_series_and_trend_boxplots` is designed to generate the time series and the trends (relative to time and GMST respectively) for the datasets.
 
