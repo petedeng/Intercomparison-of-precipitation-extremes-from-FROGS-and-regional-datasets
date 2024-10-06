@@ -1,10 +1,14 @@
 # Intercomparison-of-precipitation-extremes-from-FROGS-and-regional-datasets
-Plotting functions for "Intercomparison of precipitation extremes from FROGS and regional datasets"
+This repository contains Python functions to generate spatial and time series plots for "Intercomparison of precipitation extremes from the global Frequent Rainfall Observations on GridS (FROGS; Roca et al. 2019) and regional datasets"
 
 
-# Spatial Patterns Plotting Function
+# Plotting Functions
 
-This Python function, `plot_spatial_patterns`, is designed to generate spatial plots for multiple datasets. It uses libraries such as Pandas, Seaborn, NumPy, Xarray, Matplotlib, Cartopy, and others.
+`plot_time_series_and_trend_boxplots`
+`plot_spatial_patterns`
+`plot_spatial_patterns_diff`
+
+![Sample plot by the function "plot_time_series_and_trend_boxplots"](42sau_rx1day_time_series_and_trend_boxplots)
 
 ## Usage
 
@@ -28,7 +32,7 @@ This Python function, `plot_spatial_patterns`, is designed to generate spatial p
     cartopy
     ```
 
-### How to Use the `plot_spatial_patterns` Function
+## Example: How to Use the `plot_spatial_patterns` Function
 
 To use the `plot_spatial_patterns` function, follow these steps:
 
@@ -52,57 +56,28 @@ To use the `plot_spatial_patterns` function, you need to provide the necessary i
 from your_module import plot_spatial_patterns
 
 # Example input parameters
-spatial_patterns = ...  # Your spatial patterns data, xarray.DataArray object
-
-datasets_names = ...    # List of dataset names, e.g., datasets_names = ["REGEN_LONG_V1-2019","GPCC_FDD_v2020","CPC_v1.0"]
-
-boundary_kwargs = ...   # Dictionary with boundary settings, e.g., boundary_kwargs = {'lon_reg_min': 109.5, 'lon_reg_max': 155.5, 'lat_reg_min': -45.5, 'lat_reg_max': -9.5}
-
-cluster_kwargs = ...    # Dictionary with cluster settings, e.g., cluster_kwargs = {'num_insitu': 3, 'num_sat': 6, 'num_reanal': 4, 'num_reg': 1}
-
-txt_kwargs = ...
-# Dictionary with text settings, e,g,
-#ylabel_ts = 'R10mm (days)'
-#ylabel_ts_ano = 'Anomaly of R10mm (days)'
-#cbar_lb_sp = 'R10mm (days)'
-#cbar_lb_sp_diff = 'Difference in R10mm (days) (Mean)'
-#ylabel_box_abs = 'Trend in R10mm'
-#
-#ylabel_box_rel = 'Trend in precentage change of R10mm' 
-#pr_indx_n = "R10mm"
-#pr_indx_n_unit = "(unit: days)"
-#pr_indx_n_trabs_unit = "(unit: days/decade)"
-#pr_indx_n_trrel_unit = "(unit: %/\N{DEGREE SIGN}C)"
-#
-#region_n = "C.Australia"
-##region_n2 = "W.North-America in the updated SREX regions in the sixth IPCC assessment report (AR6)"
-#base_p_n = "1998–2017"
-#trend_p_n = "2000-2019"
-#
-#reg_data_details = "regional in situ data, i.e., the Australian Gridded Climate Data (AGCD, previously \
-#termed Australian Water Availability Project [AWAP]; Jones et al., 2009)"
-#
-#txt_kwargs = {'ylabel_ts': ylabel_ts, 'ylabel_ts_ano': ylabel_ts_ano, \
-#    'region_n': region_n, 'pr_indx_n': pr_indx_n,\
-#    'reg_data_details': reg_data_details,\
-#    'base_p_n': base_p_n,\
-#    'trend_p_n': trend_p_n,\
-#    'ar6_reg_name': ar6_reg_name,\
-#    'cbar_lb_sp': cbar_lb_sp,\
-#    'cbar_lb_sp_diff': cbar_lb_sp_diff,\
-#    'ylabel_box_abs': ylabel_box_abs,\
-#    'ylabel_box_rel': ylabel_box_rel,\
-#    'pr_indx_n_unit': pr_indx_n_unit,\
-#    'pr_indx_n_trabs_unit': pr_indx_n_trabs_unit,\
-#    'pr_indx_n_trrel_unit': pr_indx_n_trrel_unit}
+spatial_patterns = ...  # Your spatial patterns data as an xarray.DataArray object
+datasets_names = ["REGEN_LONG_V1-2019", "GPCC_FDD_v2020", "CPC_v1.0"...]  # List of dataset names
+boundary_kwargs = {'lon_reg_min': 109.5, 'lon_reg_max': 155.5, 'lat_reg_min': -45.5, 'lat_reg_max': -9.5}  # Boundary settings
+cluster_kwargs = {'num_insitu': 3, 'num_sat': 6, 'num_reanal': 4, 'num_reg': 1}  # Cluster settings
+txt_kwargs = {
+    'ylabel_ts': 'R10mm (days)',
+    'ylabel_ts_ano': 'Anomaly of R10mm (days)',
+    'cbar_lb_sp': 'R10mm (days)',
+    'cbar_lb_sp_diff': 'Difference in R10mm (days)',
+    'ylabel_box_abs': 'Trend in R10mm',
+    'ylabel_box_rel': 'Trend in percentage change of R10mm',
+    'pr_indx_n': 'R10mm',
+    'pr_indx_n_unit': '(days)',
+    'pr_indx_n_trabs_unit': '(days/decade)',
+    'pr_indx_n_trrel_unit': '(%/\N{DEGREE SIGN}C)',
+    'region_n': 'C. Australia',
+    'base_p_n': '1998–2017',
+    'trend_p_n': '2000-2019',
+    'reg_data_details': 'Regional in situ data from Australian Gridded Climate Data (AGCD).'
+}
 
 # Call the function
 plot_spatial_patterns(spatial_patterns, datasets_names, boundary_kwargs, cluster_kwargs, txt_kwargs)
 
 
-# Other Functions: plot_spatial_patterns_diff and plot_time_series_and_trend_boxplots
-
-The function, `plot_spatial_patterns_diff` is designed to generate spatial plots for the differences between each dataset and the mean of multiple datasets. 
-The function, `plot_time_series_and_trend_boxplots` is designed to generate the time series and the trends (relative to time and GMST respectively) for the datasets.
-
-The usage of the functions is similar to plot_spatial_patterns.
