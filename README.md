@@ -8,7 +8,7 @@ This repository contains Python functions to generate spatial and time series pl
 `plot_spatial_patterns`
 `plot_spatial_patterns_diff`
 
-![Sample plot by the function "plot_time_series_and_trend_boxplots"](42sau_rx1day_time_series_and_trend_boxplots)
+![Sample plot by the function "plot_time_series_and_trend_boxplots"](42sau_rx1day_time_series_and_trend_boxplots.png)
 
 ## Usage
 
