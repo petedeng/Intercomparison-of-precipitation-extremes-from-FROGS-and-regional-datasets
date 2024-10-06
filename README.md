@@ -49,7 +49,7 @@ sys.path.append('/path/to/directory/containing/plotting_functions.py')
 from plotting_functions import plot_spatial_patterns
 ```
 
-### Running the Function
+3. Running the Function
 
 To use the `plot_spatial_patterns` function, you need to provide the necessary input parameters. Modify the function call in your script accordingly.
 
@@ -78,8 +78,11 @@ txt_kwargs = {
     'trend_p_n': '2000-2019',
     'reg_data_details': 'Regional in situ data from Australian Gridded Climate Data (AGCD).'
 }
+```
 
-# Call the function
+4. Call the function
+
+```python
 plot_spatial_patterns(spatial_patterns, datasets_names, boundary_kwargs, cluster_kwargs, txt_kwargs)
-
+```
 
