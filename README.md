@@ -1,5 +1,5 @@
 # Intercomparison-of-precipitation-extremes-from-FROGS-and-regional-datasets
-This repository contains Python functions to generate spatial and time series plots for "Intercomparison of precipitation extremes from the global Frequent Rainfall Observations on GridS (FROGS; Roca et al. 2019) and regional datasets"
+This repository contains Python functions for generating spatial and time series plots for the *"Intercomparison of Precipitation Extremes from the Global Frequent Rainfall Observations on GridS (FROGS; Roca et al., 2019) and Regional Datasets"*, following the work by Alexander et al. (2020).
 
 
 # Plotting Functions
@@ -85,4 +85,9 @@ txt_kwargs = {
 ```python
 plot_spatial_patterns(spatial_patterns, datasets_names, boundary_kwargs, cluster_kwargs, txt_kwargs)
 ```
+
+## References
+Alexander, L. V., Bador, M., Roca, R., Contractor, S., Donat, M. G., & Nguyen, P. L. (2020). Intercomparison of annual precipitation indices and extremes over global land areas from in situ, space-based and reanalysis products. *Environmental Research Letters, 15*(5), 055002.
+
+Roca, R., Alexander, L. V., Potter, G., Bador, M., Jucá, R., Contractor, S., ... & Cloché, S. (2019). FROGS: a daily 1× 1 gridded precipitation database of rain gauge, satellite and reanalysis products. *Earth System Science Data, 11*(3), 1017-1035.
 
